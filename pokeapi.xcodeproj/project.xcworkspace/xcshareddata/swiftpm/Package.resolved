@@ -1,0 +1,24 @@
+{
+  "originHash" : "759b71c04cef4150e664e7a671e3de8668fc568afc6d5833c619f6d293ad5f8c",
+  "pins" : [
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "8a1be70a625683bc04d6903e2935bf23f3c6d609",
+        "version" : "5.19.7"
+      }
+    },
+    {
+      "identity" : "sdwebimageswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tecnologico-de-monterrey-oficial/SDWebImageSwiftUI.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5aa947356f4ea49a0c3b9968564267f6ea5abea7"
+      }
+    }
+  ],
+  "version" : 3
+}

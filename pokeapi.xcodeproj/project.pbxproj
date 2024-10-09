@@ -14,6 +14,12 @@
 		FB595BCD2C88B9A70011874A /* pokeapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BCC2C88B9A70011874A /* pokeapiTests.swift */; };
 		FB595BD72C88B9A70011874A /* pokeapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BD62C88B9A70011874A /* pokeapiUITests.swift */; };
 		FB595BD92C88B9A70011874A /* pokeapiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BD82C88B9A70011874A /* pokeapiUITestsLaunchTests.swift */; };
+		FB595BE72C88C3390011874A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FB595BE62C88C3390011874A /* SDWebImage */; };
+		FB595BE92C88C3390011874A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB595BE82C88C3390011874A /* SDWebImageMapKit */; };
+		FB595BEC2C88C54A0011874A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FB595BEB2C88C54A0011874A /* SDWebImageSwiftUI */; };
+		FB595BF02C88D0130011874A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BEF2C88D0130011874A /* Pokemon.swift */; };
+		FB595BF22C88D3B70011874A /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BF12C88D3B70011874A /* PokemonService.swift */; };
+		FB595BF42C88D4450011874A /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB595BF32C88D4450011874A /* PokemonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,9 @@
 		FB595BD22C88B9A70011874A /* pokeapiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokeapiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB595BD62C88B9A70011874A /* pokeapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeapiUITests.swift; sourceTree = "<group>"; };
 		FB595BD82C88B9A70011874A /* pokeapiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokeapiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB595BEF2C88D0130011874A /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		FB595BF12C88D3B70011874A /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
+		FB595BF32C88D4450011874A /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB595BEC2C88C54A0011874A /* SDWebImageSwiftUI in Frameworks */,
+				FB595BE92C88C3390011874A /* SDWebImageMapKit in Frameworks */,
+				FB595BE72C88C3390011874A /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +106,13 @@
 		FB595BBA2C88B9A60011874A /* pokeapi */ = {
 			isa = PBXGroup;
 			children = (
+				FB595BEE2C88CFFA0011874A /* Models */,
 				FB595BBB2C88B9A60011874A /* pokeapiApp.swift */,
 				FB595BBD2C88B9A60011874A /* ContentView.swift */,
 				FB595BBF2C88B9A70011874A /* Assets.xcassets */,
 				FB595BC12C88B9A70011874A /* Preview Content */,
+				FB595BF12C88D3B70011874A /* PokemonService.swift */,
+				FB595BF32C88D4450011874A /* PokemonDetailView.swift */,
 			);
 			path = pokeapi;
 			sourceTree = "<group>";
@@ -127,6 +142,14 @@
 			path = pokeapiUITests;
 			sourceTree = "<group>";
 		};
+		FB595BEE2C88CFFA0011874A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB595BEF2C88D0130011874A /* Pokemon.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +166,11 @@
 			dependencies = (
 			);
 			name = pokeapi;
+			packageProductDependencies = (
+				FB595BE62C88C3390011874A /* SDWebImage */,
+				FB595BE82C88C3390011874A /* SDWebImageMapKit */,
+				FB595BEB2C88C54A0011874A /* SDWebImageSwiftUI */,
+			);
 			productName = pokeapi;
 			productReference = FB595BB82C88B9A60011874A /* pokeapi.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +243,10 @@
 				Base,
 			);
 			mainGroup = FB595BAF2C88B9A60011874A;
+			packageReferences = (
+				FB595BE52C88C3390011874A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				FB595BEA2C88C54A0011874A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FB595BB92C88B9A60011874A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB595BBE2C88B9A60011874A /* ContentView.swift in Sources */,
+				FB595BF42C88D4450011874A /* PokemonDetailView.swift in Sources */,
+				FB595BF22C88D3B70011874A /* PokemonService.swift in Sources */,
 				FB595BBC2C88B9A60011874A /* pokeapiApp.swift in Sources */,
+				FB595BF02C88D0130011874A /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +617,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB595BE52C88C3390011874A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
+		FB595BEA2C88C54A0011874A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tecnologico-de-monterrey-oficial/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB595BE62C88C3390011874A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB595BE52C88C3390011874A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		FB595BE82C88C3390011874A /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB595BE52C88C3390011874A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		FB595BEB2C88C54A0011874A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB595BEA2C88C54A0011874A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB595BB02C88B9A60011874A /* Project object */;
 }
